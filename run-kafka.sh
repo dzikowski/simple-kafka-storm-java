@@ -8,7 +8,7 @@ gnome-terminal -e "bin/kafka-server-start.sh config/server2.properties"
 gnome-terminal -e "bin/kafka-server-start.sh config/server3.properties"
 
 zookeeper="--zookeeper localhost:2181"
-create="--create $zookeeper --replication-factor 2 --partitions 5"
+create="--create $zookeeper --replication-factor 3 --partitions 3"
 
 bin/kafka-topics.sh $create --topic coolkafka-in
 bin/kafka-topics.sh $create --topic coolkafka-out

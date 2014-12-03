@@ -9,9 +9,9 @@ start bin\windows\kafka-server-start.bat config\server2.properties
 start bin\windows\kafka-server-start.bat config\server3.properties
 
 call start bin\windows\kafka-topics.bat --create --zookeeper localhost:2181    ^
-		--replication-factor 2 --partitions 5 --topic coolkafka-in
+		--replication-factor 3 --partitions 3 --topic coolkafka-in
 call start bin\windows\kafka-topics.bat --create --zookeeper localhost:2181    ^
-		--replication-factor 2 --partitions 5 --topic coolkafka-out
+		--replication-factor 3 --partitions 3 --topic coolkafka-out
 
 TIMEOUT /T 3
 
